@@ -1,6 +1,7 @@
 ---
-{"dg-publish":true,"permalink":"/IC笔面试知识点/","dgPassFrontmatter":true,"dg-note-properties":{}}
+{"dg-publish":true,"dg-home":true,"permalink":"/IC笔面试知识点/","tags":["gardenEntry"],"dgPassFrontmatter":true,"dg-note-properties":{}}
 ---
+
 
 ### 跨时钟域数据处理
 对于单bit信号，简单的由慢时钟域到快时钟域，用两个D触发器打两拍即可。对于一般性的处理方法，使用脉冲展宽处理（握手法）。具体的思路是req_a在bit_a升高时拉高；req_b_r打两拍同步req_a，且bit_b=~req_b_r1 & req_b识别上升沿；ack_a_r打两拍同步req_b_r；最后req_a在收到ack_a_r的应答信号后拉低
